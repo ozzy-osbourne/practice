@@ -1,0 +1,22 @@
+<nz-table #filterTable [nzData]="listOfDisplayData">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
+    <tr>
+        <th
+            nzShowSort
+            nzSortKey="firstName"
+            nzShowFilter
+            [nzFilters]="listOfGroups"
+            (nzFilterChange)="filter($event)"
+        >firstName</th>
+        <th nzShowSort nzSortKey="lastName">lastName</th>
+        <th nzShowSort nzSortKey="group">group</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of filterTable.data">
+        <td>{{ data.firstName }}</td>
+        <td>{{ data.lastName }}</td>
+        <td>{{ data.group }}</td>
+    </tr>
+    </tbody>
+</nz-table>
