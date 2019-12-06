@@ -1,0 +1,155 @@
+{
+  "groups": [
+    "A1",
+    "B2",
+    "C3"
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "surname": "Someone",
+      "name": "Some",
+      "patronymic": "Someonovna",
+      "groups": [
+        "Group-A1",
+        "Group-B2",
+        "Group-C3"
+      ],
+      "roles": [
+        "teacher"
+      ],
+      "group": null,
+      "subjects": "Информатика"
+    },
+    {
+      "surname": "Someone2",
+      "name": "Some2",
+      "patronymic": "Someonovna2",
+      "roles": [
+        "teacher"
+      ],
+      "group": null,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "surname": "Someone3",
+      "name": "Some3",
+      "patronymic": "Someonovna3",
+      "groups": [
+        "Group-A1"
+      ],
+      "roles": [
+        "teacher"
+      ],
+      "group": null,
+      "subjects": "Математика"
+    },
+    {
+      "id": 4,
+      "surname": "Someone4",
+      "name": "Some4",
+      "patronymic": "Someonovna4",
+      "groups": [
+        "Group-B2",
+        "Group-C3"
+      ],
+      "roles": [
+        "teacher"
+      ],
+      "group": null,
+      "subjects": "Английский язык"
+    },
+    {
+      "surname": "8800",
+      "name": "444",
+      "patronymic": "333",
+      "roles": [
+        "teacher"
+      ],
+      "group": null,
+      "id": 5,
+      "groups": [
+        "Group-B2",
+        "Group-C3"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Ozzy",
+      "lastName": "Osbourne",
+      "patronymic": "Michael",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        "Математика",
+        "Английский",
+        "Информатика"
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "michael",
+      "lastName": "Jackson",
+      "patronymic": "Bob",
+      "login": "qqq",
+      "password": "123",
+      "group": "B2",
+      "role": "student",
+      "subjects": [
+        "Математика",
+        "Английский",
+        "Информатика"
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        "Математика",
+        "Английский",
+        "Информатика"
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "123",
+      "lastName": "123",
+      "patronymic": "123",
+      "login": "1231",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        "Математика",
+        "Английский",
+        "Информатика"
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "123",
+      "lastName": "123",
+      "patronymic": "3333",
+      "login": "3333",
+      "password": "321",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        "Математика",
+        "Английский",
+        "Информатика"
+      ]
+    }
+  ]
+}
