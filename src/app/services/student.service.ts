@@ -10,12 +10,16 @@ export class StudentService {
 
   constructor(private apiService: ApiService) { }
 
-  getStudents$(): Observable<IStudent[]> {
-    return this.apiService.getStudents$();
-  }
-
   addStudent$(student: IStudent): Observable<IStudent> {
     return this.apiService.addStudent$(student);
+  }
+
+  getStudent$(id: number): Observable<IStudent> {
+    return this.apiService.getStudent$(id);
+  }
+
+  getStudents$(): Observable<IStudent[]> {
+    return this.apiService.getStudents$();
   }
 
 }

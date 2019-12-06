@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { StudentService } from '../services';
+import { StudentService, GroupService } from '../services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { IStudent } from '../models';
@@ -15,12 +15,13 @@ export class UserTableComponent implements OnInit, OnDestroy {
 
   sortName: string | null = null;
   sortValue: string | null = null;
-  listOfGroups = [{ text: '123', value: '123' }, { text: 'Ozzy', value: 'Ozzy' }]; // Подгружать группы с сервера
-  listOfSearchName: string[] = [];
+  listOfGroups = []; // Подгружать группы с сервера
+  listOfSearchGroup: string[] = [];
   listOfData: Array<IStudent> = [];
   listOfDisplayData: Array<IStudent> = [];
 
   constructor(
+    private groupService: GroupService,
     private studentService: StudentService
   ) { }
 
@@ -33,6 +34,14 @@ export class UserTableComponent implements OnInit, OnDestroy {
         this.listOfDisplayData = [...this.listOfData];
       });
 
+    this.groupService.getGroups$()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(data => {
+        for (let i = 0; i < data.length; i++) {
+          this.listOfGroups[i] = {text: data[i], value: data[i]};
+        }
+      });
+
   }
 
   sort(sort: { key: string; value: string }): void {
@@ -41,15 +50,15 @@ export class UserTableComponent implements OnInit, OnDestroy {
     this.search();
   }
 
-  filter(listOfSearchName: string[]): void {
-    this.listOfSearchName = listOfSearchName;
+  filter(listOfSearchGroup: string[]): void {
+    this.listOfSearchGroup = listOfSearchGroup;
     this.search();
   }
 
   search(): void {
     /* filter data */
     const filterFunc = (item: IStudent) =>
-      (this.listOfSearchName.length ? this.listOfSearchName.some(name => item.firstName.indexOf(name) !== -1) : true);
+      (this.listOfSearchGroup.length ? this.listOfSearchGroup.some(name => item.group.indexOf(name) !== -1) : true);
 
     const data = this.listOfData.filter(item => filterFunc(item));
 

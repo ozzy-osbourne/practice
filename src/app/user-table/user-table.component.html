@@ -1,19 +1,15 @@
 <nz-table #filterTable [nzData]="listOfDisplayData">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-        <th
-            nzShowSort
-            nzSortKey="firstName"
-            nzShowFilter
-            [nzFilters]="listOfGroups"
-            (nzFilterChange)="filter($event)"
-        >firstName</th>
+        <th nzShowSort nzSortKey="firstName">firstName</th>
         <th nzShowSort nzSortKey="lastName">lastName</th>
-        <th nzShowSort nzSortKey="group">group</th>
+        <th nzShowSort nzSortKey="group" 
+        nzShowFilter [nzFilters]="listOfGroups" (nzFilterChange)="filter($event)">group</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let data of filterTable.data">
+    <!-- Нужен ховер эффект -->
+    <tr *ngFor="let data of filterTable.data" [routerLink]="['/user', data.id]">
         <td>{{ data.firstName }}</td>
         <td>{{ data.lastName }}</td>
         <td>{{ data.group }}</td>
