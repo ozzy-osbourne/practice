@@ -42,7 +42,11 @@ export class RegistrationComponent implements OnInit, OnDestroy {
       password: this.validateForm.value.password,
       group: 'A1',
       role: 'student',
-      subjects: ['Математика', 'Английский', 'Информатика'],
+      subjects: [
+        {name: 'Математика', marks: [2, 4, 3, 5, 4] },
+        {name: 'Английский', marks: [3, 2, 3, 4, 3] },
+        {name: 'Информатика', marks: [5, 4, 3, 2, 3] }
+      ],
     };
 
     this.studentService.addStudent$(this.student)

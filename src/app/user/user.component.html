@@ -1,1 +1,30 @@
-<!-- <p>Name: {{ student.firstName }}</p> -->
+<div class="container">
+    <h3>Имя: {{ student.firstName }}</h3>
+    <h3>Фамилия: {{ student.lastName }}</h3>
+    <h3>Отчество: {{ student.patronymic }}</h3>
+    <h3>Группа: {{ student.group }}</h3>
+</div>
+<div class="container">
+    <div *ngIf="student.role == 'student'">
+        <h3>Оценки:</h3>
+
+        <nz-table>
+            <thead>
+                <tr>
+                    <th>Предмет</th>
+                    <th *ngFor="let day of days">День {{ day + 1 }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let subject of subjects; let idx1 = index">
+                    <td>{{ subject.name }}</td>
+                    <td *ngFor="let mark of subject.marks; let idx2 = index" (click)="setIndexes(idx1, idx2)">
+                        {{ (idx1 == index1 && idx2 == index2) ? '' : mark }}
+                        <input nz-input *ngIf="idx1 == index1 && idx2 == index2" [(ngModel)]="inputMark" (keyup.enter)="updateMarks(idx1, idx2)">
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+
+    </div>
+</div>

@@ -14,6 +14,10 @@ export class StudentService {
     return this.apiService.addStudent$(student);
   }
 
+  changeStudent$(student: IStudent): Observable<IStudent> {
+    return this.apiService.changeStudent$(student);
+  }
+
   getStudent$(id: number): Observable<IStudent> {
     return this.apiService.getStudent$(id);
   }

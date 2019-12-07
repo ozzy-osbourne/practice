@@ -1,3 +1,5 @@
+import { ISubject } from './subject.interface';
+
 export interface IStudent {
     id: number;
     firstName: string;
@@ -7,5 +9,5 @@ export interface IStudent {
     password: string;
     group: string;
     role: string;
-    subjects: string[];
+    subjects: ISubject[];
 }

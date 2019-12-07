@@ -20,6 +20,10 @@ export class ApiService {
     return this.Http.post<IStudent>('http://localhost:3000/students', student);
   }
 
+  changeStudent$(student: IStudent): Observable<IStudent> {
+    return this.Http.put<IStudent>(`http://localhost:3000/students/${student.id}`, student);
+  }
+
   getStudent$(id: number): Observable<IStudent> {
     return this.Http.get<IStudent>(`http://localhost:3000/students/${id}`);
   }
