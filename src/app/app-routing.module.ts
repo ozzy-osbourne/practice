@@ -26,7 +26,7 @@ const routes: Routes = [
     component: UserTableComponent
   },
   {
-    path: 'user/:id',
+    path: 'user/:id/:role',
     component: UserComponent
   },
   {

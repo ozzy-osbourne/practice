@@ -1,11 +1,10 @@
-<div class="container">
+<div *ngIf="student" class="container">
     <h3>Имя: {{ student.firstName }}</h3>
     <h3>Фамилия: {{ student.lastName }}</h3>
     <h3>Отчество: {{ student.patronymic }}</h3>
     <h3>Группа: {{ student.group }}</h3>
-</div>
-<div class="container">
-    <div *ngIf="student.role == 'student'">
+    
+    <div>
         <h3>Оценки:</h3>
 
         <nz-table>
@@ -28,5 +27,13 @@
 
     </div>
 </div>
+
+<div *ngIf="teacher" class="container">
+    <h3>Имя: {{ teacher.firstName }}</h3>
+    <h3>Фамилия: {{ teacher.lastName }}</h3>
+    <h3>Отчество: {{ teacher.patronymic }}</h3>
+    <h3>Группы: <span *ngFor="let group of teacher.groups">{{group}} </span></h3>
+</div>
+
 <button nz-button nzType="default" [routerLink]="['/users']">Назад</button>
-<button nz-button nzType="danger" (click)="deleteStudent()" [routerLink]="['/users']">Удалить</button>
+<button nz-button nzType="danger" (click)="deleteUser()" [routerLink]="['/users']">Удалить</button>

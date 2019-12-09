@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { IStudent, ISubject } from '../models';
-import { StudentService } from '../services';
+import { IStudent, ISubject, ITeacher } from '../models';
+import { StudentService, TeacherService } from '../services';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
@@ -14,24 +14,27 @@ export class UserComponent implements OnInit, OnDestroy {
 
   private unsubscribe$: Subject<void> = new Subject();
 
-  id: number;
+  teacher: ITeacher = undefined;
+
+  student: IStudent = undefined;
   inputMark: number;
   index1: number;
   index2: number;
-  student: IStudent;
   subjects: ISubject[];
   days: number[];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private teacherService: TeacherService,
     private studentService: StudentService
   ) { }
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-
-    this.studentService.getStudent$(id)
+    const role = this.route.snapshot.paramMap.get('role');
+    if (role === 'student') {
+      this.studentService.getStudent$(id)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(data => {
         this.student = data;
@@ -39,6 +42,13 @@ export class UserComponent implements OnInit, OnDestroy {
         this.days = [0, 1, 2, 3, 4];
         console.log(data);
       });
+    } else {
+      this.teacherService.getTeacher$(id)
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(data => {
+        this.teacher = data;
+      });
+    }
   }
 
   setIndexes(idx1: number, idx2: number): void {
@@ -57,9 +67,15 @@ export class UserComponent implements OnInit, OnDestroy {
     this.index2 = undefined;
   }
 
-  deleteStudent(): void {
-    this.studentService.deleteStudent$(this.student.id)
-      .subscribe();
+  deleteUser(): void {
+    const role = this.route.snapshot.paramMap.get('role');
+    if (role === 'student') {
+      this.studentService.deleteStudent$(this.student.id)
+        .subscribe();
+    } else {
+      this.teacherService.deleteTeacher$(this.teacher.id)
+        .subscribe();
+    }
     this.router.navigate(['/users']);
   }
 

@@ -14,4 +14,12 @@ export class TeacherService {
     return this.apiService.getTeachers$();
   }
 
+  getTeacher$(id: number): Observable<ITeacher> {
+    return this.apiService.getTeacher$(id);
+  }
+
+  deleteTeacher$(id: number): Observable<object> {
+    return this.apiService.deleteTeacher$(id);
+  }
+
 }

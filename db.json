@@ -43,6 +43,50 @@
       "subjects": [
         "Английский"
       ]
+    },
+    {
+      "id": 4,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "groups": ["B2", "C3"],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "groups": ["B2", "C3"],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "groups": ["B2", "C3"],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "groups": ["B2", "C3"],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
     }
   ],
   "students": [

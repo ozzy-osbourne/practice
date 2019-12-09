@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { StudentService, GroupService, TeacherService } from '../services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { IStudent } from '../models';
+import { IStudent, ITeacher } from '../models';
 import { Router, NavigationStart } from '@angular/router';
 
 @Component({
@@ -20,8 +20,8 @@ export class UserTableComponent implements OnInit, OnDestroy {
   sortValue: string | null = null;
   listOfGroups = []; // Подгружать группы с сервера
   listOfSearchGroup: string[] = [];
-  listOfData: Array<IStudent> = [];
-  listOfDisplayData: Array<IStudent> = [];
+  listOfData: Array<IStudent> | Array<ITeacher> = [];
+  listOfDisplayData: Array<IStudent> | Array<ITeacher> = [];
 
   constructor(
     private router: Router,
@@ -104,12 +104,12 @@ export class UserTableComponent implements OnInit, OnDestroy {
         this.listOfDisplayData = [...this.listOfData];
       });
     } else {
-      // this.teacherService.getTeachers$()
-      // .pipe(takeUntil(this.unsubscribe$))
-      // .subscribe(data => {
-      //   this.listOfData = data;
-      //   this.listOfDisplayData = [...this.listOfData];
-      // });
+      this.teacherService.getTeachers$()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(data => {
+        this.listOfData = data;
+        this.listOfDisplayData = [...this.listOfData];
+      });
     }
   }
 

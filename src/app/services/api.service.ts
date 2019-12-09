@@ -41,4 +41,12 @@ export class ApiService {
     return this.Http.get<ITeacher[]>('http://localhost:3000/teachers');
   }
 
+  getTeacher$(id: number): Observable<ITeacher> {
+    return this.Http.get<ITeacher>(`http://localhost:3000/teachers/${id}`);
+  }
+
+  deleteTeacher$(id: number): Observable<object> {
+    return this.Http.delete<object>(`http://localhost:3000/teachers/${id}`);
+  }
+
 }
