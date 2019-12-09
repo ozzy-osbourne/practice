@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IStudent } from '../models';
+import { IStudent, ITeacher } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +32,13 @@ export class ApiService {
     return this.Http.get<IStudent[]>('http://localhost:3000/students');
   }
 
+  deleteStudent$(id: number): Observable<object> {
+    return this.Http.delete<object>(`http://localhost:3000/students/${id}`);
+  }
+
   // Teacher
+  getTeachers$(): Observable<ITeacher[]> {
+    return this.Http.get<ITeacher[]>('http://localhost:3000/teachers');
+  }
 
 }

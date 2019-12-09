@@ -26,4 +26,8 @@ export class StudentService {
     return this.apiService.getStudents$();
   }
 
+  deleteStudent$(id: number): Observable<object> {
+    return this.apiService.deleteStudent$(id);
+  }
+
 }

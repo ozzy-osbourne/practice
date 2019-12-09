@@ -1,3 +1,7 @@
+<nz-select [(ngModel)]="selectedValue" (ngModelChange)="provinceChange($event)">
+    <nz-option nzValue="students" nzLabel="Студенты"></nz-option>
+    <nz-option nzValue="teachers" nzLabel="Учителя"></nz-option>
+</nz-select>
 <nz-table #filterTable [nzData]="listOfDisplayData">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>

@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { StudentService, GroupService } from '../services';
+import { StudentService, GroupService, TeacherService } from '../services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { IStudent } from '../models';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-user-table',
@@ -13,6 +14,8 @@ export class UserTableComponent implements OnInit, OnDestroy {
 
   private unsubscribe$: Subject<void> = new Subject();
 
+  selectedValue = 'students';
+
   sortName: string | null = null;
   sortValue: string | null = null;
   listOfGroups = []; // Подгружать группы с сервера
@@ -21,7 +24,9 @@ export class UserTableComponent implements OnInit, OnDestroy {
   listOfDisplayData: Array<IStudent> = [];
 
   constructor(
+    private router: Router,
     private groupService: GroupService,
+    private teacherService: TeacherService,
     private studentService: StudentService
   ) { }
 
@@ -39,6 +44,15 @@ export class UserTableComponent implements OnInit, OnDestroy {
       .subscribe(data => {
         for (let i = 0; i < data.length; i++) {
           this.listOfGroups[i] = {text: data[i], value: data[i]};
+        }
+      });
+
+    this.router.events.subscribe(event => {
+        if (event instanceof NavigationStart) {
+          this.studentService.getStudents$().subscribe(data => {
+              this.listOfData = data;
+              this.listOfDisplayData = [...this.listOfData];
+            });
         }
       });
 
@@ -77,6 +91,25 @@ export class UserTableComponent implements OnInit, OnDestroy {
       );
     } else {
       this.listOfDisplayData = data;
+    }
+  }
+
+  provinceChange(value: string): void {
+    // console.log(value);
+    if (value === 'students') {
+      this.studentService.getStudents$()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(data => {
+        this.listOfData = data;
+        this.listOfDisplayData = [...this.listOfData];
+      });
+    } else {
+      // this.teacherService.getTeachers$()
+      // .pipe(takeUntil(this.unsubscribe$))
+      // .subscribe(data => {
+      //   this.listOfData = data;
+      //   this.listOfDisplayData = [...this.listOfData];
+      // });
     }
   }
 
