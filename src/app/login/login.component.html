@@ -22,7 +22,7 @@
             <span>Remember me</span>
         </label>
         <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
-        <button nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+        <button nz-button class="login-form-button" [nzType]="'primary'" [disabled]="!isValid">Log in</button>
         Or
         <a href="/registration">register now!</a>
         </nz-form-control>
