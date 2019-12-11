@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { IStudent, ISubject, ITeacher } from '../models';
-import { StudentService, TeacherService } from '../services';
+import { StudentService, TeacherService, AuthService } from '../services';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
@@ -26,6 +26,7 @@ export class UserComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private authService: AuthService,
     private teacherService: TeacherService,
     private studentService: StudentService
   ) { }

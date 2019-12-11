@@ -18,8 +18,8 @@
                 <tr *ngFor="let subject of subjects; let idx1 = index">
                     <td>{{ subject.name }}</td>
                     <td *ngFor="let mark of subject.marks; let idx2 = index" (click)="setIndexes(idx1, idx2)">
-                        {{ (idx1 == index1 && idx2 == index2) ? '' : mark }}
-                        <input nz-input *ngIf="idx1 == index1 && idx2 == index2" [(ngModel)]="inputMark" (keyup.enter)="updateMarks(idx1, idx2)">
+                        {{ (idx1 == index1 && idx2 == index2 && authService.isTeacher()) ? '' : mark }}
+                        <input nz-input *ngIf="idx1 == index1 && idx2 == index2 && authService.isTeacher()" [(ngModel)]="inputMark" (keyup.enter)="updateMarks(idx1, idx2)">
                     </td>
                 </tr>
             </tbody>

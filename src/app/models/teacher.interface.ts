@@ -3,6 +3,8 @@ export interface ITeacher {
     firstName: string;
     lastName: string;
     patronymic: string;
+    login: string;
+    password: string;
     groups: string[];
     role: string;
     subjects: string[];

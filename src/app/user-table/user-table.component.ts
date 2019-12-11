@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { IStudent, ITeacher } from '../models';
 import { Router, NavigationStart } from '@angular/router';
+import { setItem } from '../services/utils/lsFunctions';
 
 @Component({
   selector: 'app-user-table',
@@ -111,6 +112,11 @@ export class UserTableComponent implements OnInit, OnDestroy {
         this.listOfDisplayData = [...this.listOfData];
       });
     }
+  }
+
+  exit(): void {
+    setItem('role', '');
+    this.router.navigate(['/login']);
   }
 
   ngOnDestroy(): void {

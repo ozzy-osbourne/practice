@@ -17,6 +17,15 @@
     </nz-form-item>
 
     <nz-form-item>
+        <nz-form-control [nzSpan]="12">
+            <nz-select formControlName="role">
+                <nz-option nzValue="student" nzLabel="Студент"></nz-option>
+                <nz-option nzValue="teacher" nzLabel="Учитель"></nz-option>
+            </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+    <nz-form-item>
         <nz-form-control>
         <label nz-checkbox formControlName="remember">
             <span>Remember me</span>

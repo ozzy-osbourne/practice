@@ -15,6 +15,8 @@
       "firstName": "Someone",
       "lastName": "Some",
       "patronymic": "Someonovna",
+      "login": "qqq",
+      "password": "123",
       "groups": ["A1", "B2"],
       "role": "teacher",
       "subjects": [
@@ -27,6 +29,8 @@
       "firstName": "Someone2",
       "lastName": "Some2",
       "patronymic": "Someonovna2",
+      "login": "qqq",
+      "password": "123",
       "groups": ["C3"],
       "role": "teacher",
       "subjects": [
@@ -38,6 +42,8 @@
       "firstName": "Someone3",
       "lastName": "Some3",
       "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
       "groups": ["B2", "C3"],
       "role": "teacher",
       "subjects": [
@@ -49,6 +55,8 @@
       "firstName": "Someone3",
       "lastName": "Some3",
       "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
       "groups": ["B2", "C3"],
       "role": "teacher",
       "subjects": [
@@ -60,6 +68,8 @@
       "firstName": "Someone3",
       "lastName": "Some3",
       "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
       "groups": ["B2", "C3"],
       "role": "teacher",
       "subjects": [
@@ -71,6 +81,8 @@
       "firstName": "Someone3",
       "lastName": "Some3",
       "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
       "groups": ["B2", "C3"],
       "role": "teacher",
       "subjects": [
@@ -82,6 +94,8 @@
       "firstName": "Someone3",
       "lastName": "Some3",
       "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
       "groups": ["B2", "C3"],
       "role": "teacher",
       "subjects": [

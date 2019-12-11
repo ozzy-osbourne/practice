@@ -2,6 +2,7 @@
     <nz-option nzValue="students" nzLabel="Студенты"></nz-option>
     <nz-option nzValue="teachers" nzLabel="Учителя"></nz-option>
 </nz-select>
+<button nz-button nzType="danger" (click)="exit()" [routerLink]="['/login']">Выйти</button>
 <nz-table #filterTable [nzData]="listOfDisplayData">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
