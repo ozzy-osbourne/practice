@@ -45,6 +45,10 @@ export class ApiService {
     return this.Http.get<ITeacher>(`http://localhost:3000/teachers/${id}`);
   }
 
+  changeTeacher$(teacher: ITeacher): Observable<ITeacher> {
+    return this.Http.put<ITeacher>(`http://localhost:3000/students/${teacher.id}`, teacher);
+  }
+
   deleteTeacher$(id: number): Observable<object> {
     return this.Http.delete<object>(`http://localhost:3000/teachers/${id}`);
   }

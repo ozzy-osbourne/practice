@@ -28,7 +28,8 @@ const routes: Routes = [
   },
   {
     path: 'user/:id/:role',
-    component: UserComponent
+    component: UserComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: '**',

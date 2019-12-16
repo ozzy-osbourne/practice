@@ -36,4 +36,5 @@
 </div>
 
 <button nz-button nzType="default" [routerLink]="['/users']">Назад</button>
-<button nz-button nzType="danger" (click)="deleteUser()" [routerLink]="['/users']">Удалить</button>
+<button nz-button nzType="primary" *ngIf="authService.isTeacher()" (click)="editContact($event)" >Изменить</button>
+<button nz-button nzType="danger" *ngIf="authService.isTeacher()" (click)="deleteUser()" [routerLink]="['/users']">Удалить</button>

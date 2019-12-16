@@ -1,0 +1,26 @@
+<form nz-form [formGroup]="addEditContactForm">
+  <nz-form-item nzFlex>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="firstName">Имя</nz-form-label>
+    <nz-form-control [nzSm]="16" [nzXs]="24">
+      <input nz-input  formControlName="firstName" id="firstName">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nzFlex>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="lastName">Фамилия</nz-form-label>
+    <nz-form-control [nzSm]="16" [nzXs]="24">
+      <input nz-input  formControlName="lastName" id="lastName">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nzFlex>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="patronymic">Отчество</nz-form-label>
+    <nz-form-control [nzSm]="16" [nzXs]="24">
+      <input nz-input  formControlName="patronymic" id="patronymic">
+    </nz-form-control>
+  </nz-form-item>
+</form>
+
+<nz-divider></nz-divider>
+
+<button nz-button nzType="primary" (click)="submitForm()">Save</button>
+&nbsp;
+<button nz-button nzType="default" (click)="destroyModal(null, true)"> Cancel</button>

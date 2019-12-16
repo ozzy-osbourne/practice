@@ -4,6 +4,8 @@ import { Subject } from 'rxjs';
 import { IStudent, ISubject, ITeacher } from '../models';
 import { StudentService, TeacherService, AuthService } from '../services';
 import { takeUntil } from 'rxjs/operators';
+import { NzModalService } from 'ng-zorro-antd';
+import { AddEditContactComponent } from '../common/add-edit-contact/add-edit-contact.component';
 
 @Component({
   selector: 'app-user',
@@ -27,6 +29,7 @@ export class UserComponent implements OnInit, OnDestroy {
     private router: Router,
     private route: ActivatedRoute,
     private authService: AuthService,
+    private modalService: NzModalService,
     private teacherService: TeacherService,
     private studentService: StudentService
   ) { }
@@ -50,6 +53,23 @@ export class UserComponent implements OnInit, OnDestroy {
         this.teacher = data;
       });
     }
+  }
+
+  editContact($event: Event): void {
+    const role = this.route.snapshot.paramMap.get('role');
+    $event.stopPropagation();
+    const modal = this.modalService.create({
+      nzClosable: true,
+      nzMaskClosable: false,
+      nzTitle: 'Редактирование пользователя',
+      nzContent: AddEditContactComponent,
+      nzComponentParams: {
+        role: role === 'student' ? 'student' : 'teacher',
+        user: role === 'student' ? this.student : this.teacher
+      },
+      nzWidth: '500px',
+      nzFooter: null
+    });
   }
 
   setIndexes(idx1: number, idx2: number): void {

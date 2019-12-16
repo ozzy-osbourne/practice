@@ -18,6 +18,10 @@ export class TeacherService {
     return this.apiService.getTeacher$(id);
   }
 
+  changeTeacher$(teacher: ITeacher): Observable<ITeacher> {
+    return this.apiService.changeTeacher$(teacher);
+  }
+
   deleteTeacher$(id: number): Observable<object> {
     return this.apiService.deleteTeacher$(id);
   }

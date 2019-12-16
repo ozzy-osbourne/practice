@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { UserComponent } from './user/user.component';
+import { AddEditContactComponent } from './common/add-edit-contact/add-edit-contact.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
     LoginComponent,
     RegistrationComponent,
     UserTableComponent,
-    UserComponent
+    UserComponent,
+    AddEditContactComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,9 @@ registerLocaleData(en);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule
+  ],
+  entryComponents: [
+    AddEditContactComponent,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

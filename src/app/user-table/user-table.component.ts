@@ -21,8 +21,8 @@ export class UserTableComponent implements OnInit, OnDestroy {
   sortValue: string | null = null;
   listOfGroups = []; // Подгружать группы с сервера
   listOfSearchGroup: string[] = [];
-  listOfData: Array<IStudent> | Array<ITeacher> = [];
-  listOfDisplayData: Array<IStudent> | Array<ITeacher> = [];
+  listOfData: any[] = [];
+  listOfDisplayData: any[] = [];
 
   constructor(
     private router: Router,
@@ -72,7 +72,7 @@ export class UserTableComponent implements OnInit, OnDestroy {
 
   search(): void {
     /* filter data */
-    const filterFunc = (item: IStudent) =>
+    const filterFunc = item =>
       (this.listOfSearchGroup.length ? this.listOfSearchGroup.some(name => item.group.indexOf(name) !== -1) : true);
 
     const data = this.listOfData.filter(item => filterFunc(item));
@@ -96,7 +96,6 @@ export class UserTableComponent implements OnInit, OnDestroy {
   }
 
   provinceChange(value: string): void {
-    // console.log(value);
     if (value === 'students') {
       this.studentService.getStudents$()
       .pipe(takeUntil(this.unsubscribe$))

@@ -17,7 +17,10 @@
       "patronymic": "Someonovna",
       "login": "qqq",
       "password": "123",
-      "groups": ["A1", "B2"],
+      "groups": [
+        "A1",
+        "B2"
+      ],
       "role": "teacher",
       "subjects": [
         "Математика",
@@ -31,7 +34,9 @@
       "patronymic": "Someonovna2",
       "login": "qqq",
       "password": "123",
-      "groups": ["C3"],
+      "groups": [
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Информатика"
@@ -44,7 +49,10 @@
       "patronymic": "Someonovna3",
       "login": "qqq",
       "password": "123",
-      "groups": ["B2", "C3"],
+      "groups": [
+        "B2",
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Английский"
@@ -57,7 +65,10 @@
       "patronymic": "Someonovna3",
       "login": "qqq",
       "password": "123",
-      "groups": ["B2", "C3"],
+      "groups": [
+        "B2",
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Английский"
@@ -70,7 +81,10 @@
       "patronymic": "Someonovna3",
       "login": "qqq",
       "password": "123",
-      "groups": ["B2", "C3"],
+      "groups": [
+        "B2",
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Английский"
@@ -83,7 +97,10 @@
       "patronymic": "Someonovna3",
       "login": "qqq",
       "password": "123",
-      "groups": ["B2", "C3"],
+      "groups": [
+        "B2",
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Английский"
@@ -96,7 +113,10 @@
       "patronymic": "Someonovna3",
       "login": "qqq",
       "password": "123",
-      "groups": ["B2", "C3"],
+      "groups": [
+        "B2",
+        "C3"
+      ],
       "role": "teacher",
       "subjects": [
         "Английский"
@@ -232,9 +252,9 @@
     },
     {
       "id": 4,
-      "firstName": "qwert",
-      "lastName": "azert",
-      "patronymic": "wasd",
+      "firstName": "qwert1",
+      "lastName": "azert34",
+      "patronymic": "wasd12",
       "login": "qqq",
       "password": "123",
       "group": "A1",
@@ -253,7 +273,7 @@
         {
           "name": "Английский",
           "marks": [
-            3,
+            2,
             2,
             3,
             4,
