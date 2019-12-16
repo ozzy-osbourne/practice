@@ -1,0 +1,24 @@
+<nz-select [(ngModel)]="selectedValue" (ngModelChange)="provinceChange($event)">
+    <nz-option nzValue="students" nzLabel="Студенты"></nz-option>
+    <nz-option nzValue="teachers" nzLabel="Учителя"></nz-option>
+</nz-select>
+<button nz-button nzType="danger" (click)="exit()" [routerLink]="['/login']">Выйти</button>
+<nz-table #filterTable [nzData]="listOfDisplayData">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
+    <tr>
+        <th nzShowSort nzSortKey="firstName">firstName</th>
+        <th nzShowSort nzSortKey="lastName">lastName</th>
+        <th *ngIf="selectedValue == 'students'" nzShowSort nzSortKey="group" 
+        nzShowFilter [nzFilters]="listOfGroups" (nzFilterChange)="filter($event)">group</th>
+        <th *ngIf="selectedValue == 'teachers'" nzShowSort nzSortKey="patronymic">patronymic</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of filterTable.data" [routerLink]="['/user', data.id, data.role]">
+        <td>{{ data.firstName }}</td>
+        <td>{{ data.lastName }}</td>
+        <td *ngIf="selectedValue == 'students'">{{ data.group }}</td>
+        <td *ngIf="selectedValue == 'teachers'">{{ data.patronymic }}</td>
+    </tr>
+    </tbody>
+</nz-table>

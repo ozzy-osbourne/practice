@@ -1,0 +1,40 @@
+<div *ngIf="student" class="container">
+    <h3>Имя: {{ student.firstName }}</h3>
+    <h3>Фамилия: {{ student.lastName }}</h3>
+    <h3>Отчество: {{ student.patronymic }}</h3>
+    <h3>Группа: {{ student.group }}</h3>
+    
+    <div>
+        <h3>Оценки:</h3>
+
+        <nz-table>
+            <thead>
+                <tr>
+                    <th>Предмет</th>
+                    <th *ngFor="let day of days">День {{ day + 1 }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let subject of subjects; let idx1 = index">
+                    <td>{{ subject.name }}</td>
+                    <td *ngFor="let mark of subject.marks; let idx2 = index" (click)="setIndexes(idx1, idx2)">
+                        {{ (idx1 == index1 && idx2 == index2 && authService.isTeacher()) ? '' : mark }}
+                        <input nz-input *ngIf="idx1 == index1 && idx2 == index2 && authService.isTeacher()" [(ngModel)]="inputMark" (keyup.enter)="updateMarks(idx1, idx2)">
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+
+    </div>
+</div>
+
+<div *ngIf="teacher" class="container">
+    <h3>Имя: {{ teacher.firstName }}</h3>
+    <h3>Фамилия: {{ teacher.lastName }}</h3>
+    <h3>Отчество: {{ teacher.patronymic }}</h3>
+    <h3>Группы: <span *ngFor="let group of teacher.groups">{{group}} </span></h3>
+</div>
+
+<button nz-button nzType="default" [routerLink]="['/users']">Назад</button>
+<button nz-button nzType="primary" *ngIf="authService.isTeacher()" (click)="editContact($event)" >Изменить</button>
+<button nz-button nzType="danger" *ngIf="authService.isTeacher()" (click)="deleteUser()" [routerLink]="['/users']">Удалить</button>

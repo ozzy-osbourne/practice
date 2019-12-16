@@ -1,0 +1,884 @@
+{
+  "groups": [
+    "A1",
+    "B2",
+    "C3"
+  ],
+  "subjects": [
+    "Математика",
+    "Английский",
+    "Информатика"
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "firstName": "Someone",
+      "lastName": "Some",
+      "patronymic": "Someonovna",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "A1",
+        "B2"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Математика",
+        "Информатика"
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Someone2",
+      "lastName": "Some2",
+      "patronymic": "Someonovna2",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Информатика"
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "B2",
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "B2",
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "B2",
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "B2",
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Someone3",
+      "lastName": "Some3",
+      "patronymic": "Someonovna3",
+      "login": "qqq",
+      "password": "123",
+      "groups": [
+        "B2",
+        "C3"
+      ],
+      "role": "teacher",
+      "subjects": [
+        "Английский"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Ozzy",
+      "lastName": "Osbourne",
+      "patronymic": "Michael",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "michael",
+      "lastName": "Jackson",
+      "patronymic": "Bob",
+      "login": "qqq",
+      "password": "123",
+      "group": "B2",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "qwert1",
+      "lastName": "azert34",
+      "patronymic": "wasd12",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            2,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "firstName": "qwert",
+      "lastName": "azert",
+      "patronymic": "wasd",
+      "login": "qqq",
+      "password": "123",
+      "group": "A1",
+      "role": "student",
+      "subjects": [
+        {
+          "name": "Математика",
+          "marks": [
+            5,
+            4,
+            3,
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Английский",
+          "marks": [
+            3,
+            2,
+            3,
+            4,
+            3
+          ]
+        },
+        {
+          "name": "Информатика",
+          "marks": [
+            5,
+            4,
+            3,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}
